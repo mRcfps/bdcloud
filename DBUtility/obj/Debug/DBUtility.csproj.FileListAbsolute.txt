@@ -1,0 +1,7 @@
+E:\BDCloud5\BDCloud\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+E:\BDCloud5\BDCloud\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+E:\BDCloud5\BDCloud\DBUtility\bin\Debug\MySql.Data.dll
+E:\BDCloud5\BDCloud\DBUtility\bin\Debug\System.Data.SQLite.DLL
+E:\BDCloud5\BDCloud\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+E:\BDCloud5\BDCloud\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+E:\BDCloud5\BDCloud\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb

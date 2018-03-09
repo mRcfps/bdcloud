@@ -1,0 +1,5 @@
+E:\BDCloud5\BDCloud\User\bin\Debug\User.dll
+E:\BDCloud5\BDCloud\User\bin\Debug\User.pdb
+E:\BDCloud5\BDCloud\User\obj\Debug\User.dll
+E:\BDCloud5\BDCloud\User\obj\Debug\User.pdb
+E:\BDCloud5\BDCloud\User\obj\Debug\User.csprojResolveAssemblyReference.cache

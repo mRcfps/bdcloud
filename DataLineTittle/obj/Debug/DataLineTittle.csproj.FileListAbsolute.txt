@@ -1,0 +1,6 @@
+E:\BDCloud5\BDCloud\DataLineTittle\bin\Debug\DataLineTittle.dll
+E:\BDCloud5\BDCloud\DataLineTittle\bin\Debug\DataLineTittle.pdb
+E:\BDCloud5\BDCloud\DataLineTittle\obj\Debug\DataLineTittle.UserControl1.resources
+E:\BDCloud5\BDCloud\DataLineTittle\obj\Debug\DataLineTittle.csproj.GenerateResource.Cache
+E:\BDCloud5\BDCloud\DataLineTittle\obj\Debug\DataLineTittle.dll
+E:\BDCloud5\BDCloud\DataLineTittle\obj\Debug\DataLineTittle.pdb

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EEA9E1B2-A7B8-4CB6-BBCA-9E6CA17CCDA5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BDCloud</RootNamespace>
+    <AssemblyName>BDCloud</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_min.png.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clue\CaseClue.cs" />
+    <Compile Include="clue\ClueDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clue\ClueDetailsForm.Designer.cs">
+      <DependentUpon>ClueDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clue\ClueHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\ClueInfo.cs" />
+    <Compile Include="common\ClueTypeEnum.cs" />
+    <Compile Include="data\DataListHandle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data\DataListInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="evidence\evidenceHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="evidence\evidenceBean.cs" />
+    <Compile Include="evidence\UploadThread.cs" />
+    <Compile Include="FolderBrowserDialogEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeaderForm.designer.cs">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagination.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uploadQueueCache.cs" />
+    <EmbeddedResource Include="clue\ClueDetailsForm.resx">
+      <DependentUpon>ClueDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.zh-CN.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderForm.resx">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\bottom_left.png" />
+    <Content Include="img\bottom_right.png" />
+    <Content Include="img\bottom_setting.png" />
+    <Content Include="img\clueItemBackground.png" />
+    <Content Include="img\exit2.png" />
+    <Content Include="img\head.png" />
+    <Content Include="img\home.png" />
+    <Content Include="img\home2.png" />
+    <Content Include="img\homepic_d1.png" />
+    <Content Include="img\inputbox.png" />
+    <Content Include="img\ipinput.png" />
+    <Content Include="img\label.png" />
+    <Content Include="img\lastpage.png" />
+    <Content Include="img\left.png" />
+    <Content Include="img\left2.png" />
+    <Content Include="img\left_selected.png" />
+    <Content Include="img\loggingbox.png" />
+    <Content Include="img\login.png" />
+    <Content Include="img\logo_min.png.ico" />
+    <Content Include="img\max2.png" />
+    <Content Include="img\min.png" />
+    <Content Include="img\exit.png" />
+    <Content Include="img\max.png" />
+    <Content Include="img\min2.png" />
+    <Content Include="img\nextpage.png" />
+    <Content Include="img\page_jump.png" />
+    <None Include="img\pause.png" />
+    <Content Include="img\right.png" />
+    <Content Include="img\right2.png" />
+    <Content Include="img\right_selected.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\searchpic_d1.png" />
+    <Content Include="img\setting.png" />
+    <None Include="img\start.png" />
+    <Content Include="img\toolbar.png" />
+    <Content Include="img\typepic_d1.png" />
+    <Content Include="img\upload.png" />
+    <Content Include="img\uploadbox.png" />
+    <Content Include="img\upload_backg_d2.png" />
+    <Content Include="img\upload_d2.png" />
+    <Content Include="logo_min.png.ico" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\clueItemBackground.png" />
+    <None Include="Resources\clueItemBackground.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\pdf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CluePanel\CluePanel.csproj">
+      <Project>{6FF427F7-FAB2-4F6C-8F9D-82F2B15C54D1}</Project>
+      <Name>CluePanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9FE00521-3A8B-42B1-814E-585E99407B2E}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLineA\DataLineA.csproj">
+      <Project>{4AFC0392-6438-45FE-A9B0-85D6FB7C6593}</Project>
+      <Name>DataLineA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLineTittle\DataLineTittle.csproj">
+      <Project>{793B0374-06BE-4015-96F5-44586EA82879}</Project>
+      <Name>DataLineTittle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FTP\FTP.csproj">
+      <Project>{69E2D965-E474-4009-AA3F-D77EF6241C7F}</Project>
+      <Name>FTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProcessBar\MyProcessBar.csproj">
+      <Project>{5D9A920B-DEF1-4E3D-8AA0-E91E20C542E8}</Project>
+      <Name>MyProcessBar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProcessBar_SystemStaus\ProcessBar_SystemStaus.csproj">
+      <Project>{EA06BFD8-DEF1-4C6F-99E4-241DB355CD82}</Project>
+      <Name>ProcessBar_SystemStaus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{E502E8A9-44B8-441F-963D-5D7847C74D70}</Project>
+      <Name>User</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

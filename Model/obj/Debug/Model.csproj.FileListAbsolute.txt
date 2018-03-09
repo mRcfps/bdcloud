@@ -1,0 +1,5 @@
+E:\BDCloud5\BDCloud\Model\bin\Debug\Maticsoft.Model.dll
+E:\BDCloud5\BDCloud\Model\bin\Debug\Maticsoft.Model.pdb
+E:\BDCloud5\BDCloud\Model\obj\Debug\Maticsoft.Model.dll
+E:\BDCloud5\BDCloud\Model\obj\Debug\Maticsoft.Model.pdb
+E:\BDCloud5\BDCloud\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

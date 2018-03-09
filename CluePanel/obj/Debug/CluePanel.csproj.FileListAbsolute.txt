@@ -1,0 +1,7 @@
+E:\BDCloud5\BDCloud\CluePanel\bin\Debug\CluePanel.dll
+E:\BDCloud5\BDCloud\CluePanel\bin\Debug\CluePanel.pdb
+E:\BDCloud5\BDCloud\CluePanel\obj\Debug\CluePanel.Properties.Resources.resources
+E:\BDCloud5\BDCloud\CluePanel\obj\Debug\CluePanel.UserControl1.resources
+E:\BDCloud5\BDCloud\CluePanel\obj\Debug\CluePanel.csproj.GenerateResource.Cache
+E:\BDCloud5\BDCloud\CluePanel\obj\Debug\CluePanel.dll
+E:\BDCloud5\BDCloud\CluePanel\obj\Debug\CluePanel.pdb

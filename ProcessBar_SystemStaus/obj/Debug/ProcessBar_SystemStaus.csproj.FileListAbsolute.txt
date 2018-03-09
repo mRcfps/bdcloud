@@ -1,0 +1,4 @@
+E:\BDCloud5\BDCloud\ProcessBar_SystemStaus\bin\Debug\ProcessBar_SystemStaus.dll
+E:\BDCloud5\BDCloud\ProcessBar_SystemStaus\bin\Debug\ProcessBar_SystemStaus.pdb
+E:\BDCloud5\BDCloud\ProcessBar_SystemStaus\obj\Debug\ProcessBar_SystemStaus.dll
+E:\BDCloud5\BDCloud\ProcessBar_SystemStaus\obj\Debug\ProcessBar_SystemStaus.pdb

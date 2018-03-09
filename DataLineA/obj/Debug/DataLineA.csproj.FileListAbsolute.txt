@@ -1,0 +1,10 @@
+E:\BDCloud5\BDCloud\DataLineA\bin\Debug\DataLineA.dll
+E:\BDCloud5\BDCloud\DataLineA\bin\Debug\DataLineA.pdb
+E:\BDCloud5\BDCloud\DataLineA\bin\Debug\MyProcessBar.dll
+E:\BDCloud5\BDCloud\DataLineA\bin\Debug\MyProcessBar.pdb
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.csprojResolveAssemblyReference.cache
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.Properties.Resources.resources
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.UserControl1.resources
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.csproj.GenerateResource.Cache
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.dll
+E:\BDCloud5\BDCloud\DataLineA\obj\Debug\DataLineA.pdb

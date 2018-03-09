@@ -1,0 +1,5 @@
+E:\BDCloud5\BDCloud\MyProcessBar\bin\Debug\MyProcessBar.dll
+E:\BDCloud5\BDCloud\MyProcessBar\bin\Debug\MyProcessBar.pdb
+E:\BDCloud5\BDCloud\MyProcessBar\obj\Debug\MyProcessBar.dll
+E:\BDCloud5\BDCloud\MyProcessBar\obj\Debug\MyProcessBar.pdb
+E:\BDCloud5\BDCloud\MyProcessBar\obj\Debug\MyProcessBar.csprojResolveAssemblyReference.cache

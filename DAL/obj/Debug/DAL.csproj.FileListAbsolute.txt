@@ -1,0 +1,12 @@
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.DAL.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.DAL.pdb
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.Common.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.DBUtility.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.Model.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\MySql.Data.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\System.Data.SQLite.dll
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.DBUtility.pdb
+E:\BDCloud5\BDCloud\DAL\bin\Debug\Maticsoft.Model.pdb
+E:\BDCloud5\BDCloud\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\BDCloud5\BDCloud\DAL\obj\Debug\Maticsoft.DAL.dll
+E:\BDCloud5\BDCloud\DAL\obj\Debug\Maticsoft.DAL.pdb
