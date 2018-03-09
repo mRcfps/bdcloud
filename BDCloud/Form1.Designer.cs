@@ -41,8 +41,8 @@
             this.labelSystem = new System.Windows.Forms.Label();
             this.labelSpace = new System.Windows.Forms.Label();
             this.max_d1 = new System.Windows.Forms.PictureBox();
-            this.exit_d1 = new System.Windows.Forms.PictureBox();
-            this.min_d1 = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
+            this.minButton = new System.Windows.Forms.PictureBox();
             this.tabTransFinish = new System.Windows.Forms.TabPage();
             this.dataTransFinish = new System.Windows.Forms.DataGridView();
             this.fileType = new System.Windows.Forms.DataGridViewImageColumn();
@@ -82,7 +82,7 @@
             this.txtComment = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtEvName = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.uploadPanel = new System.Windows.Forms.Panel();
             this.dropFile = new System.Windows.Forms.Panel();
             this.uploadMessage = new System.Windows.Forms.Label();
             this.FilePath = new System.Windows.Forms.Label();
@@ -166,8 +166,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_title_d1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.max_d1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit_d1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.min_d1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minButton)).BeginInit();
             this.tabTransFinish.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTransFinish)).BeginInit();
             this.tabUpload.SuspendLayout();
@@ -178,7 +178,7 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.uploadPanel.SuspendLayout();
             this.dropFile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uploadIcon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -223,14 +223,11 @@
             this.panelTitle_d1.Controls.Add(this.labelSystem);
             this.panelTitle_d1.Controls.Add(this.labelSpace);
             this.panelTitle_d1.Controls.Add(this.max_d1);
-            this.panelTitle_d1.Controls.Add(this.exit_d1);
-            this.panelTitle_d1.Controls.Add(this.min_d1);
+            this.panelTitle_d1.Controls.Add(this.closeButton);
+            this.panelTitle_d1.Controls.Add(this.minButton);
             resources.ApplyResources(this.panelTitle_d1, "panelTitle_d1");
             this.panelTitle_d1.Name = "panelTitle_d1";
-            this.panelTitle_d1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panelTitle_d1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelTitle_d1_MouseClick);
-            this.panelTitle_d1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panelTitle_d1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // labelUpload
             // 
@@ -276,7 +273,6 @@
             resources.ApplyResources(this.labelUser, "labelUser");
             this.labelUser.ForeColor = System.Drawing.Color.White;
             this.labelUser.Name = "labelUser";
-            this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
             // 
             // picImage
             // 
@@ -307,20 +303,20 @@
             this.max_d1.TabStop = false;
             this.max_d1.Click += new System.EventHandler(this.max_d1_Click);
             // 
-            // exit_d1
+            // closeButton
             // 
-            this.exit_d1.Image = global::BDCloud.Properties.Resources.exit;
-            resources.ApplyResources(this.exit_d1, "exit_d1");
-            this.exit_d1.Name = "exit_d1";
-            this.exit_d1.TabStop = false;
-            this.exit_d1.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.closeButton.Image = global::BDCloud.Properties.Resources.exit;
+            resources.ApplyResources(this.closeButton, "closeButton");
+            this.closeButton.Name = "closeButton";
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // min_d1
+            // minButton
             // 
-            resources.ApplyResources(this.min_d1, "min_d1");
-            this.min_d1.Name = "min_d1";
-            this.min_d1.TabStop = false;
-            this.min_d1.Click += new System.EventHandler(this.pictureBox1_Click);
+            resources.ApplyResources(this.minButton, "minButton");
+            this.minButton.Name = "minButton";
+            this.minButton.TabStop = false;
+            this.minButton.Click += new System.EventHandler(this.minButton_Click);
             // 
             // tabTransFinish
             // 
@@ -416,7 +412,7 @@
             this.tabUpload.Controls.Add(this.panel5);
             this.tabUpload.Controls.Add(this.panel4);
             this.tabUpload.Controls.Add(this.panel3);
-            this.tabUpload.Controls.Add(this.panel1);
+            this.tabUpload.Controls.Add(this.uploadPanel);
             this.tabUpload.Controls.Add(this.panel2);
             this.tabUpload.Controls.Add(this.pictureBox4);
             this.tabUpload.Controls.Add(this.pictureBox1);
@@ -634,12 +630,12 @@
             this.txtEvName.Name = "txtEvName";
             this.txtEvName.TextChanged += new System.EventHandler(this.txtEvName_TextChanged);
             // 
-            // panel1
+            // uploadPanel
             // 
-            this.panel1.BackgroundImage = global::BDCloud.Properties.Resources.uploadbox;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.dropFile);
-            this.panel1.Name = "panel1";
+            this.uploadPanel.BackgroundImage = global::BDCloud.Properties.Resources.uploadbox;
+            resources.ApplyResources(this.uploadPanel, "uploadPanel");
+            this.uploadPanel.Controls.Add(this.dropFile);
+            this.uploadPanel.Name = "uploadPanel";
             // 
             // dropFile
             // 
@@ -867,77 +863,66 @@
             this.userControl11.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl11, "userControl11");
             this.userControl11.Name = "userControl11";
-            this.userControl11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl11_MouseClick);
             // 
             // userControl111
             // 
             this.userControl111.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl111, "userControl111");
             this.userControl111.Name = "userControl111";
-            this.userControl111.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl111_MouseClick);
             // 
             // userControl110
             // 
             this.userControl110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             resources.ApplyResources(this.userControl110, "userControl110");
             this.userControl110.Name = "userControl110";
-            this.userControl110.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl110_MouseClick);
             // 
             // userControl19
             // 
             this.userControl19.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl19, "userControl19");
             this.userControl19.Name = "userControl19";
-            this.userControl19.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl19_MouseClick);
             // 
             // userControl18
             // 
             this.userControl18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             resources.ApplyResources(this.userControl18, "userControl18");
             this.userControl18.Name = "userControl18";
-            this.userControl18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl18_MouseClick);
             // 
             // userControl17
             // 
             this.userControl17.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl17, "userControl17");
             this.userControl17.Name = "userControl17";
-            this.userControl17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl17_MouseClick);
             // 
             // userControl16
             // 
             this.userControl16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             resources.ApplyResources(this.userControl16, "userControl16");
             this.userControl16.Name = "userControl16";
-            this.userControl16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl16_MouseClick);
             // 
             // userControl15
             // 
             this.userControl15.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl15, "userControl15");
             this.userControl15.Name = "userControl15";
-            this.userControl15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl15_MouseClick);
             // 
             // userControl14
             // 
             this.userControl14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             resources.ApplyResources(this.userControl14, "userControl14");
             this.userControl14.Name = "userControl14";
-            this.userControl14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl14_MouseClick);
             // 
             // userControl13
             // 
             this.userControl13.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.userControl13, "userControl13");
             this.userControl13.Name = "userControl13";
-            this.userControl13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl13_MouseClick);
             // 
             // userControl12
             // 
             this.userControl12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             resources.ApplyResources(this.userControl12, "userControl12");
             this.userControl12.Name = "userControl12";
-            this.userControl12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.userControl12_MouseClick);
             // 
             // tabClueList
             // 
@@ -946,8 +931,6 @@
             this.tabClueList.ForeColor = System.Drawing.SystemColors.ControlText;
             resources.ApplyResources(this.tabClueList, "tabClueList");
             this.tabClueList.Name = "tabClueList";
-            this.tabClueList.Click += new System.EventHandler(this.tabClueList_Click);
-            this.tabClueList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // panelClue_d1
             // 
@@ -1000,7 +983,6 @@
             resources.ApplyResources(this.page_jump_d1, "page_jump_d1");
             this.page_jump_d1.ForeColor = System.Drawing.Color.Gray;
             this.page_jump_d1.Name = "page_jump_d1";
-            this.page_jump_d1.Click += new System.EventHandler(this.page_jump_d1_Click);
             // 
             // btnnextpage_d1
             // 
@@ -1009,7 +991,6 @@
             this.btnnextpage_d1.Image = global::BDCloud.Properties.Resources.nextpage;
             this.btnnextpage_d1.Name = "btnnextpage_d1";
             this.btnnextpage_d1.UseVisualStyleBackColor = false;
-            this.btnnextpage_d1.Click += new System.EventHandler(this.btnnextpage_d1_Click);
             // 
             // btnpage5_d1
             // 
@@ -1018,7 +999,6 @@
             this.btnpage5_d1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.btnpage5_d1.Name = "btnpage5_d1";
             this.btnpage5_d1.UseVisualStyleBackColor = false;
-            this.btnpage5_d1.Click += new System.EventHandler(this.btnpage5_d1_Click);
             // 
             // btnpage4_d1
             // 
@@ -1027,7 +1007,6 @@
             this.btnpage4_d1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.btnpage4_d1.Name = "btnpage4_d1";
             this.btnpage4_d1.UseVisualStyleBackColor = false;
-            this.btnpage4_d1.Click += new System.EventHandler(this.btnpage4_d1_Click);
             // 
             // btnpage3_d1
             // 
@@ -1036,7 +1015,6 @@
             this.btnpage3_d1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.btnpage3_d1.Name = "btnpage3_d1";
             this.btnpage3_d1.UseVisualStyleBackColor = false;
-            this.btnpage3_d1.Click += new System.EventHandler(this.btnpage3_d1_Click_1);
             // 
             // btnpage2_d1
             // 
@@ -1045,7 +1023,6 @@
             this.btnpage2_d1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.btnpage2_d1.Name = "btnpage2_d1";
             this.btnpage2_d1.UseVisualStyleBackColor = false;
-            this.btnpage2_d1.Click += new System.EventHandler(this.btnpage2_d1_Click_1);
             // 
             // btnpage1_d1
             // 
@@ -1054,7 +1031,6 @@
             this.btnpage1_d1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.btnpage1_d1.Name = "btnpage1_d1";
             this.btnpage1_d1.UseVisualStyleBackColor = false;
-            this.btnpage1_d1.Click += new System.EventHandler(this.btnpage1_d1_Click_1);
             // 
             // btnlastpage_d1
             // 
@@ -1063,7 +1039,6 @@
             this.btnlastpage_d1.Image = global::BDCloud.Properties.Resources.lastpage;
             this.btnlastpage_d1.Name = "btnlastpage_d1";
             this.btnlastpage_d1.UseVisualStyleBackColor = false;
-            this.btnlastpage_d1.Click += new System.EventHandler(this.btnlastpage_d1_Click);
             // 
             // panelbottom_d1
             // 
@@ -1138,7 +1113,6 @@
             this.clueitem4_d1.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.clueitem4_d1, "clueitem4_d1");
             this.clueitem4_d1.Name = "clueitem4_d1";
-            this.clueitem4_d1.Load += new System.EventHandler(this.userControl14_Load);
             // 
             // clueitem3_d1
             // 
@@ -1320,8 +1294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_title_d1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.max_d1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit_d1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.min_d1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minButton)).EndInit();
             this.tabTransFinish.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataTransFinish)).EndInit();
             this.tabUpload.ResumeLayout(false);
@@ -1336,7 +1310,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.uploadPanel.ResumeLayout(false);
             this.dropFile.ResumeLayout(false);
             this.dropFile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uploadIcon)).EndInit();
@@ -1382,8 +1356,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panelTitle_d1;
-        private System.Windows.Forms.PictureBox min_d1;
-        private System.Windows.Forms.PictureBox exit_d1;
+        private System.Windows.Forms.PictureBox minButton;
+        private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.PictureBox max_d1;
         private System.Windows.Forms.Label label_title_d1;
         private System.Windows.Forms.PictureBox pic_title_d1;
@@ -1471,7 +1445,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox evTypes_d3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel uploadPanel;
         private System.Windows.Forms.PictureBox uploadIcon;
         private System.Windows.Forms.Panel panelbottom_d2;
         private System.Windows.Forms.PictureBox picSetting_d2;

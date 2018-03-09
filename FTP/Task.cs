@@ -7,7 +7,7 @@ namespace FTP
 {
     public class Task
     {
-        public int eviId;
+        public string eviId;
         public int progress;
         public UploadState status;
 
@@ -17,6 +17,7 @@ namespace FTP
 
         public void Start()
         {
+            
         }
 
         public void Run()

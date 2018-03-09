@@ -72,13 +72,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clue\CaseClue.cs" />
-    <Compile Include="clue\ClueDetailsForm.cs">
+    <Compile Include="ClueDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clue\ClueDetailsForm.Designer.cs">
+    <Compile Include="ClueDetailsForm.Designer.cs">
       <DependentUpon>ClueDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="clue\ClueHandle.cs">
+    <Compile Include="Ftp\Queue.cs" />
+    <Compile Include="Ftp\Task.cs" />
+    <Compile Include="Tabs\ClueListPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="common\ClueInfo.cs" />
@@ -93,7 +95,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="evidence\evidenceBean.cs" />
-    <Compile Include="evidence\UploadThread.cs" />
     <Compile Include="FolderBrowserDialogEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -103,6 +104,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ftp\HashUtils.cs" />
+    <Compile Include="Ftp\PathUtils.cs" />
+    <Compile Include="Ftp\Uploader.cs" />
     <Compile Include="HeaderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,8 +129,14 @@
     <Compile Include="SettingsForm.designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\UploadPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="uploadQueueCache.cs" />
-    <EmbeddedResource Include="clue\ClueDetailsForm.resx">
+    <Compile Include="Tabs\UploadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ClueDetailsForm.resx">
       <DependentUpon>ClueDetailsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -244,10 +254,6 @@
     <ProjectReference Include="..\DBUtility\DBUtility.csproj">
       <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
       <Name>DBUtility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FTP\FTP.csproj">
-      <Project>{69E2D965-E474-4009-AA3F-D77EF6241C7F}</Project>
-      <Name>FTP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>

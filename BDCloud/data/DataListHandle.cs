@@ -47,13 +47,6 @@ namespace BDCloud
         //存放每个控件对应的内容
         public List<Maticsoft.Model.evidence> DataList = new List<Maticsoft.Model.evidence>();
 
-        /*
-        public void showClueList()
-        {
-            init("");
-            setDataListByPage(nowDataPage);
-        }*/
-
         /// <summary>  
         /// 根据条件查询数据
         /// </summary>
@@ -95,7 +88,7 @@ namespace BDCloud
             sql = sql + " order by id desc";
 
             init(sql);
-            //MessageBox.Show(sql);
+
             setDataListByPage(nowDataPage);
         }
 
@@ -499,7 +492,6 @@ namespace BDCloud
                             case ("true"):
                                 break;
                             default:
-                                //MessageBox.Show(ds.Tables[0].Rows[0]["finished"].ToString());
                                 ctl.extent = 0;
                                 break;
                         }
@@ -625,129 +617,7 @@ namespace BDCloud
             {
                  uploadThread = new Thread(() =>
                 {
-                    
-              
-                    #region Action
-                    Action<double> progressAction = delegate(double progress)
-                    {
-                        uploadProgressBar.Value = (int)(progress * 100);
-                        progressLabel.Text = ((int)(progress * 100.0)).ToString() + "%";
-                        ProgressCache.add_update_Item(eviId, (int)(progress * 100));
-                    };
-                    Action<double> speedAction = delegate(double speed)
-                    {
-                        Console.Out.WriteLine("Speed: " + speed);
-                        if (speed < (double)1024)
-                        {
-                            speedLabel.Text = Math.Round(speed, 1).ToString() + "B/s";
-                        }
-                        else if (speed < Math.Pow(1024, 2))
-                        {
-                            speedLabel.Text = Math.Round((speed / 1024.0), 1).ToString() + "KB/s";
-                        }
-                        else if (speed < Math.Pow(1024, 3))
-                        {
-                            speedLabel.Text = Math.Round((speed / Math.Pow(1024, 2)), 1).ToString() + "MB/s";
-                        }
-                        else
-                        {
-                            speedLabel.Text = Math.Round((speed / Math.Pow(1024, 3)), 1).ToString() + "GB/s";
-                        }
-                    };
-
-
-
-                    Action<int, int> numAction = delegate(int uploadedNum, int totalNum)
-                    {
-                        uploadNumLabel.Text = "已上传数 " + uploadedNum.ToString() + "/" + totalNum.ToString();
-                    };
-
-                    Action<string> logAction = delegate(string log)
-                    {
-                        logBox.AppendText(log + "\r\n");
-                        logBox.SelectionStart = logBox.Text.Length;
-
-                        logBox.ScrollToCaret();
-                    };
-
-                    Action<DateTime> timeAction = delegate(DateTime remainTime)
-                    {
-                        timeLabel.Text = "剩余时间 " + remainTime.ToString("HH:mm:ss");
-                    };
-
-                    // 读数据库操作  读取本地路径和文件大小
-                    //      FilePath.Text
-
-
-
-                    Action<bool> workCompleted = delegate(bool isDone)
-                    {
-                        if (isDone)
-                        {
-                            //    //跳转到数据列表页面,当前页为上传页面时执行
-                            //    if (tabIndex == 2) 
-                            //    {
-
-                            //        historyList.Add(1);
-                            //        historyIndex++;
-                            //        int index = 1;
-                            //        tabPages.SelectedIndex = index;
-                            //        tabIndex = index;
-                            //        changeForwardAndBackStyle();
-                            //        this.btnupload_d2.Visible = true;
-                            //        this.pic_upload_d2.Visible = true;
-                            //        this.panel_upload_d2.Visible = true;
-                            //        while (typeList_d1.Items.Count > 0)
-                            //            typeList_d1.Items.RemoveAt(typeList_d1.Items.Count - 1);
-                            //        typeList_d1.Items.Add("处理状态");
-                            //        typeList_d1.Items.Add("上传中");
-                            //        typeList_d1.Items.Add("上传完成");
-                            //        typeList_d1.Items.Add("解析中");
-                            //        typeList_d1.Items.Add("解析完成");
-                            //        typeList_d1.SelectedIndex = 0;
-                            //        searchDataList("");
-                            //    }
-
-                            uploadButton.Text = "上传";
-                            updateFilesSuccStatus();      //上传完成，修改finished字段为true    
-                            insertOnLineNumberDataToDB();//将onlinenumber 表中字段进行更新
-                            //  dataTransimit();
-                            startAnalysis(FTP.UploaderEx.FtpPathHash, filesBeans[index].getId().ToString());
-                            Console.WriteLine("--------------  " + FTP.UploaderEx.FtpPathHash + "   " + filesBeans[index].getId().ToString());
-                            filesBeans[index].setInit(false);
-                            evTypes_d3.TextChanged -= new EventHandler(evTypes_d3_TextChanged);
-                            evTypes_d3.Text = "电子邮件";
-                            evTypes_d3.TextChanged += new EventHandler(evTypes_d3_TextChanged);
-
-                            FilePath.TextChanged -= new EventHandler(FilePath_TextChanged);
-                            FilePath.Text = "";
-                            FilePath.TextChanged += new EventHandler(FilePath_TextChanged);
-
-                            uploadIcon.Visible = true;
-                            uploadMessage.Visible = true;
-
-                            txtEvName.TextChanged -= new EventHandler(txtEvName_TextChanged);
-                            txtEvName.Text = "";
-                            txtEvName.TextChanged += new EventHandler(txtEvName_TextChanged);
-
-                            txtComment.TextChanged -= new EventHandler(txtComment_TextChanged);
-                            txtComment.Text = "";
-                            txtComment.TextChanged += new EventHandler(txtComment_TextChanged);
-
-                            dataTypes_d3.TextChanged -= new EventHandler(dataTypes_d3_TextChanged);
-                            dataTypes_d3.Text = "";
-                            dataTypes_d3.TextChanged += new EventHandler(dataTypes_d3_TextChanged);
-
-                            progressLabel.Text = 0 + "%";
-                            uploadProgressBar.Value = 0;
-                            showSystemStaus();
-                        }
-                    };
-                    #endregion
-                    FTP.UploaderEx.uploadPath(path,
-                        progressAction,
-                        speedAction, timeAction
-                        , numAction, logAction, workCompleted);
+                    Ftp.Uploader.uploadPath(path);
                 });
                 uploadThread.Name = "uploadThread";
                 uploadThread.Start();
@@ -793,12 +663,11 @@ namespace BDCloud
             //删除已上传的文件
             if (filePath != "") 
             {
-                FTP.UploaderEx.deletePath(filePath);
-                //MessageBox.Show("fuck" + id + " " + filePath);
+                Ftp.Uploader.deletePath(filePath);
                 
                 //初始化上传页面
                 filesBeans[index].setInit(false);
-                FTP.UploaderEx.reset();
+                Ftp.Uploader.reset();
                 initUploadHandlePage();
             }
                 
@@ -854,12 +723,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -916,12 +785,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -978,12 +847,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1040,12 +909,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1102,12 +971,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1164,12 +1033,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1226,12 +1095,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1288,12 +1157,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 
@@ -1350,12 +1219,12 @@ namespace BDCloud
                 //删除已上传的文件
                 if (filePath != "")
                 {
-                    FTP.UploaderEx.deletePath(filePath);
+                    Ftp.Uploader.deletePath(filePath);
                     //MessageBox.Show("fuck" + id + " " + filePath);
 
                     //初始化上传页面
                     filesBeans[index].setInit(false);
-                    FTP.UploaderEx.reset();
+                    Ftp.Uploader.reset();
                     initUploadHandlePage();
                 }
 

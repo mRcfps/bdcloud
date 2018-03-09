@@ -420,34 +420,34 @@
   <data name="&gt;&gt;max_d1.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="exit_d1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="closeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="exit_d1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>984, 9</value>
   </data>
-  <data name="exit_d1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="exit_d1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="closeButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="exit_d1.TabIndex" type="System.Int32, mscorlib">
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;exit_d1.Name" xml:space="preserve">
-    <value>exit_d1</value>
+  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
+    <value>closeButton</value>
   </data>
-  <data name="&gt;&gt;exit_d1.Type" xml:space="preserve">
+  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;exit_d1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
     <value>panelTitle_d1</value>
   </data>
-  <data name="&gt;&gt;exit_d1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="min_d1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="minButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAd5JREFUeF7t
         1j1qVVEUBeCXKmMQgmAKhTgBi0xB0gTsjYqIhUJmoOI8ki5YJlraxEacgKkUiwhW/oBYPde9dw/h3Jd3
@@ -461,31 +461,31 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="min_d1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="minButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="min_d1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="minButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>925, 9</value>
   </data>
-  <data name="min_d1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="minButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="min_d1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="minButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="min_d1.TabIndex" type="System.Int32, mscorlib">
+  <data name="minButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;min_d1.Name" xml:space="preserve">
-    <value>min_d1</value>
+  <data name="&gt;&gt;minButton.Name" xml:space="preserve">
+    <value>minButton</value>
   </data>
-  <data name="&gt;&gt;min_d1.Type" xml:space="preserve">
+  <data name="&gt;&gt;minButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;min_d1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;minButton.Parent" xml:space="preserve">
     <value>panelTitle_d1</value>
   </data>
-  <data name="&gt;&gt;min_d1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;minButton.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="panelTitle_d1.Location" type="System.Drawing.Point, System.Drawing">
@@ -1451,7 +1451,7 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="panel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="uploadPanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
   <data name="uploadMessage.AutoSize" type="System.Boolean, mscorlib">
@@ -1557,30 +1557,30 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dropFile.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>uploadPanel</value>
   </data>
   <data name="&gt;&gt;dropFile.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="uploadPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>196, 134</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="uploadPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 60</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="uploadPanel.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;uploadPanel.Name" xml:space="preserve">
+    <value>uploadPanel</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;uploadPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;uploadPanel.Parent" xml:space="preserve">
     <value>tabUpload</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;uploadPanel.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
   <data name="panel2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">

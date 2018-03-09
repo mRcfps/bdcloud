@@ -5,7 +5,6 @@ E:\BDCloud5\BDCloud\BDCloud\bin\Debug\zh-CN\BDCloud.resources.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\CluePanel.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\DataLineA.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\DataLineTittle.dll
-E:\BDCloud5\BDCloud\BDCloud\bin\Debug\FTP.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.BLL.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.DAL.dll
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.DBUtility.dll
@@ -22,7 +21,6 @@ E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.DAL.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\DataLineA.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\DataLineTittle.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.DBUtility.pdb
-E:\BDCloud5\BDCloud\BDCloud\bin\Debug\FTP.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\Maticsoft.Model.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\MyProcessBar.pdb
 E:\BDCloud5\BDCloud\BDCloud\bin\Debug\ProcessBar_SystemStaus.pdb

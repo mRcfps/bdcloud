@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -10,13 +9,13 @@ using System.Windows.Forms;
 using BDCloud.common;
 using BDCloud.clue;
 using User;
+
 namespace BDCloud
 {
     public partial class Form1 : Form
     {
         int cluecount_d1 = 0;//线索数量
         int cluecount_now_d1 = 0;//当前页的线索数
-        int pageNow_d1 = 1;//当前页标记
         bool isSearch_d1 = false;//判断当前搜索是否是根据搜索框内容搜索
         int pagesNum_d1 = 1;//总页数
         int size_d1 = 9;//每页线索最大数
@@ -24,13 +23,11 @@ namespace BDCloud
 
         public void initialze_d1()
         {
-            pageNow_d1 = 1;//当前页标记
             pagesNum_d1 = 1;//总页数
             if (cluecount_d1 % size_d1 != 0)
                 pagesNum_d1 = cluecount_d1 / size_d1 + 1;
             else
                 pagesNum_d1 = cluecount_d1 / size_d1;
-         //   pageStyleShow();
             showPages_d1(1);
             
             if (!isSearch_d1)//typeList_d1.Items.Count == 1)
@@ -380,7 +377,7 @@ namespace BDCloud
         /// <summary>
         /// 系统的存储状态，当前上传人数,用户姓名和等级显示
         /// </summary>
-        public void showSystemStaus()
+        public void ShowSystemStatus()
         {
             //上传人数显示
             Maticsoft.BLL.onlinenumber onlines = new Maticsoft.BLL.onlinenumber();
@@ -393,7 +390,6 @@ namespace BDCloud
                     if (onlineList1[i].username.Equals(onlineList1[j].username))
                     {
                         onlineList1.RemoveAt(j);
-                        //break;
                     }
                 }
             }

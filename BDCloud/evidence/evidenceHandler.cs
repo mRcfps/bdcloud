@@ -166,21 +166,11 @@ namespace BDCloud
             {
                 evType_d3 = "3";
             }
-            //注释掉的代码是因为客户端不支持该种类型。
-            //				else if ("手机取证".equals(dataType.getText())) {
-            //					type = "4";
-            //				} 
             else if ("图片资料".Equals(evTpyes))
             {
                 evType_d3 = "6";
 
             }
-            //				else if ("黑客数据".equals(dataType.getText())) {
-            //					type = "5";
-            //				}
-            // else if ("混合数据".equals(dataType.getText())) {
-            // type = "7";
-            // }
             else
             {
                 evType_d3 = "-1";
